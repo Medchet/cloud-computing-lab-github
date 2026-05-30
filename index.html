@@ -2,18 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cloud Computing Lab </title>
+    <title>Cloud Computing Lab</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
-        .status { color: green; font-weight: bold; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 16px;
+            min-height: 100vh;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e6f9f0;
+            color: #1a7a4a;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+        }
+        .dot { width: 8px; height: 8px; background: #1a7a4a; border-radius: 50%; }
+        h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+        .subtitle { font-size: 15px; color: #555; margin-bottom: 1.25rem; }
+        .subtitle b { color: #1a1a1a; }
+        img { margin-bottom: 1.5rem; opacity: 0.85; }
+        hr { border: none; border-top: 1px solid #eee; margin-bottom: 1.25rem; }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            text-align: left;
+        }
+        .info-item {
+            background: #f7f8fa;
+            border-radius: 10px;
+            padding: 10px 14px;
+        }
+        .info-item.full { grid-column: 1 / -1; }
+        .info-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+        .info-value { font-size: 14px; font-weight: 600; color: #1a1a1a; }
     </style>
 </head>
 <body>
-    <h1>Cloud-Native Deployment Success!</h1>
-    <p>This site was deployed using <b>GitHub Actions</b>.</p>
-    <div class="status">● Site Status: Live</div>
-    <hr>
-    <p>Student Name: [Replace with your name]</p>
-    <p>Current Cloud Provider: GitHub (Microsoft Azure Infrastructure)</p>
+    <div class="card">
+        <div class="badge"><span class="dot"></span> Site Status: Live</div>
+        <h1>Cloud-Native Deployment Success!</h1>
+        <p class="subtitle">This site was deployed using <b>GitHub Actions</b>.</p>
+        <img src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" width="80" alt="Actions Logo">
+        <hr>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Student Name</div>
+                <div class="info-value">Mohamed Chetouani</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Last Updated</div>
+                <div class="info-value">Mai 2026</div>
+            </div>
+            <div class="info-item full">
+                <div class="info-label">Current Cloud Provider</div>
+                <div class="info-value">GitHub (Microsoft Azure Infrastructure)</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
